@@ -227,7 +227,7 @@ module RJack
               @logger.#{lvl}( msg.to_s, ex.cause )
             elsif #{lvl}?
               log = msg.to_s.dup
-              log << '\n'
+              log << ' '
               log << ex.class.name << ': ' << ex.message << '\n'
               ex.backtrace && ex.backtrace.each do |b|
                 log << '\t' << b << '\n'
